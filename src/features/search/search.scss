@@ -1,0 +1,33 @@
+.search{
+    width: 200px;
+    height: 36px;
+    form{
+        .formControl{
+            width: 192px;
+            height: 20px;
+            padding: 8px;
+            background-color: #31303b;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+
+            &::placeholder{
+                color: #999fb1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 465px){
+    
+    .search{
+        width: 150px;
+
+        .serachForm {
+
+            input{
+                width: 130px;
+            }   
+        }
+    }
+}

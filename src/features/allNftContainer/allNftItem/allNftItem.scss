@@ -1,0 +1,41 @@
+.allNftItem{
+    background-color: #181820;
+    color: #fff;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr repeat(7, 1fr);
+    border: 1px #313141 solid;
+    align-items: center;
+
+    .allNftItemIndex{
+        justify-self: center;
+    }
+
+    .allnftItemNameImage{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        transition: 0.2s;
+
+        &:hover{
+            color: #d3d3d3;
+        }
+
+        img{
+            width: 30px;
+            height: 30px;
+            padding-right: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .allNftItem{
+        .allNftItemOffer{
+            display: none;
+        }
+    }
+}
+

@@ -1,0 +1,19 @@
+.infoSolana{
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0 0 0);
+    color: #fff;
+    width: 100%;
+
+    .innerBlock{
+
+        .item1{
+            margin-right: 10px;
+        }
+
+        .item2{
+            margin-left: 10px;
+        }
+    }
+}

@@ -1,0 +1,138 @@
+.nftTopContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 80%;
+    padding-right: 30px;
+  
+    .nftTopContainerInner{
+        display: flex;
+    }
+
+    .nftTopContainerFirst{
+        display: flex;
+        flex-direction: column;
+
+        .nftTopContainerFirstName{
+            display: flex;
+            align-items: center;
+            color: #fff;
+            margin-bottom: 20px;
+            
+            img{
+                width: 45px;
+                height: 45px;
+                margin-right: 15px;
+            }
+        }
+
+        .nftTopContainerFirstLinks{
+            display: flex;
+            margin-bottom: 20px;
+
+            div{
+                margin: 0 5px;
+                background-color: #32313e;
+
+                padding: 4px 8px;
+                border-radius: 50px;
+                font-size: 12px;
+
+                a{
+                    color: #fff;
+                    text-decoration: none;
+    
+                    &:hover{
+                        color: #d3d3d3;
+                    }
+                }
+            }
+
+            & :first-child{
+                margin-left: 0;
+            }
+
+            & :last-child{
+                margin-right: 0;
+            }
+        }
+
+        .nftTopContainerFirstTags{
+            display: flex;
+            flex-direction: column;
+
+            span{
+                color: #787889;
+            }
+
+            .nftTopContainerFirstTagsInner{
+                display: flex;
+                margin-top: 20px;
+
+                div{
+                    margin: 0 5px;
+                    background-color: #32313e;
+                    color: rgba(212,224,255,.6);
+                    padding: 4px 8px;
+                    border-radius: 50px;
+                    font-size: 12px;
+                }
+
+                & :first-child{
+                    margin-left: 0;
+                }
+    
+                & :last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.nftTopContainerSecond{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #13131a8a;
+    width: 400px;
+    height: 200px;
+    margin-left: 15%;
+ 
+
+    .nftTopContainerSecondInfo{
+        display: flex;
+        justify-content: space-around;
+        padding: 15px 0;
+
+        .nftTopContainerItem{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3{
+                color: #7a8094;
+                font-size: 14px;
+            }
+
+            span{
+                color: #fff;
+                font-size: 20px;
+            }
+        } 
+    }
+}
+
+.nftTopContainerLine{
+    width: 80%;
+    height: 1px;
+    background-color: #3a384b;
+    align-self: center;
+}
+
+.chartContainer{
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+}

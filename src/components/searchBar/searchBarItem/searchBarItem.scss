@@ -1,0 +1,16 @@
+.searchBarItem{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
+
+    .searchBarItemImage{
+        margin-right: 10px;
+
+        img{
+            height: 40px;
+            width: 40px;
+        }
+    }
+}

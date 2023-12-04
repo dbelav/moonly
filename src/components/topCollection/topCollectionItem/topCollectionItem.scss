@@ -1,0 +1,45 @@
+.topCollectionItem{
+    width: 100%;
+    display: flex; 
+    flex-direction: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+    .itemNameImageContainer, .itemFloorVolumeContainer{
+        display: flex;
+        align-items: center;
+    }
+
+    .itemNameImageContainer{
+        color: #fff;
+        transition: 0.2s;
+        text-decoration: none;
+    
+        &:hover{
+            color: #d3d3d3;
+        }
+    }
+
+    .itemImage{
+        margin-right: 10px;
+
+        img{
+            width: 40;
+            height: 40px;
+        }
+    }
+
+    .itemFloor{
+        margin-right: 10px;
+        padding: 5px;
+        border-radius: 6px;
+        background-color: #3c3b4b;
+    }
+
+    .itemVolume{
+        margin-right: 10px;
+        padding: 5px;
+        border-radius: 6px;
+        background-color: #4e547d;
+    }
+}

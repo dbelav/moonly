@@ -1,0 +1,22 @@
+.custom-tooltip{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items: center;
+    background-color: rgb(21 21 29);
+    border-radius: 10px;
+
+    .customTooltipTime{
+        margin-bottom: 5px;
+    }
+
+    .customTooltipPrice{
+        margin-bottom: 5px;
+        color: #04a067e5;
+    }
+
+    img{
+        width: 120;
+        height: 120px;
+    }
+}

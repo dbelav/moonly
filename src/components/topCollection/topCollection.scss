@@ -1,0 +1,85 @@
+.collectionContainer{
+    width: 26%;
+    min-height: 160px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px;
+    background-color: #181821;
+    color: #fff;
+    border-radius: 8px;
+    border: #ffffff13 1px solid;
+    
+    .titleVolume{
+        h2{
+            margin: 0;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .collectionsItemsContainer{
+        .topCollectionSkeleton{
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px){
+    .collectionContainer{
+        margin: 0 15px;
+
+        .titleVolume{
+
+            h2{
+                font-size: 17px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .collectionContainer{
+        margin: 10px 1%;
+        width: 30%;
+
+        .titleVolume{
+            
+            h2{
+                font-size: 17px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px){
+    .collectionContainer{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .collectionContainer{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .collectionContainer{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .collectionContainer{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .collectionContainer{
+        width: 90%;
+    }
+}
