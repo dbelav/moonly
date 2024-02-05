@@ -1,8 +1,7 @@
-export const aseCheckData = ( value ) =>{
-    if(value){
+export const useCheckData = (value) => {
+    if (value) {
         return value
-    }
-    else{
+    } else {
         return 'N/A'
     }
 }

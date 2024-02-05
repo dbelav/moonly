@@ -1,5 +1,6 @@
 import './title.scss'
 
+
 const Title = () => {
     return(
         <div className="title">

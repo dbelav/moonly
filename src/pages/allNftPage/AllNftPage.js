@@ -2,6 +2,7 @@ import AllNftContainer from '../../features/allNftContainer/AllNftContainer'
 
 import './allNftPage.scss'
 
+
 const AllNftPage = () =>{
 
     return(

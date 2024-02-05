@@ -1,17 +1,23 @@
-import './upcomingNftPage.scss'
 import UpcomingNft from '../../features/upcomingNft/UpcomingNft'
-import { useState } from 'react'
-import { useDispatch } from "react-redux";
-import { upcomingNftButtonClick } from '../../features/upcomingNft/upcomingNftSlice';
+import { useDispatch } from 'react-redux'
+import { upcomingNftButtonClick } from '../../features/upcomingNft/upcomingNftSlice'
+
+import './upcomingNftPage.scss'
+
 
 const UpcomingNftPage = () => {
+    
+    const dispatch = useDispatch()
 
-    const dispatch = useDispatch();
-
-    return(
-        <div className='upcomingNftPage'>
+    return (
+        <div className="upcomingNftPage">
             <UpcomingNft />
-            <button className='upcomingNftPageSeeMore' onClick={() => dispatch(upcomingNftButtonClick())}>See more</button>
+            <button
+                className="upcomingNftPageSeeMore"
+                onClick={() => dispatch(upcomingNftButtonClick())}
+            >
+                See more
+            </button>
         </div>
     )
 }
