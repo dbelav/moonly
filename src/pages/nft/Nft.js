@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useGetData } from '../../hooks/useGetData'
-import { API_MAINNET_IO, API_MAINNET_V2 } from '../../apiLinks/apiLinks'
+import { API_MAINNET_IO } from '../../apiLinks/apiLinks'
 import NftTopContainer from '../../features/nftTopContainer/NftTopContainer'
 import NftRightContainer from '../../features/nftRightContainer/NftRightContainer'
 import {
@@ -53,7 +53,7 @@ const Nft = () => {
         getDataAsync(
             nftChartFetching,
             nftChartFetched,
-            `${API_MAINNET_V2}/collections/solana-mainnet/activitiesLite?limit=500&offset=0&skip=0&type=buy,buyNow&symbol=`,
+            `${API_MAINNET_IO}/v2/collections/solana-mainnet/activitiesLite?limit=500&offset=0&skip=0&type=buy,buyNow&symbol=`,
             id
         )
     }, [id])

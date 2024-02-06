@@ -1,5 +1,6 @@
 export const useCheckData = (value) => {
-    if (value) {
+    console.log(value)
+    if (value && !isNaN(value)) {
         return value
     } else {
         return 'N/A'

@@ -1,7 +1,7 @@
 import './nftRightContainerItem.scss'
 
 const NftRightContainerItem = ({period, data}) => {
-
+    
     return(
         <div className='nftRightContainerStats'>
                 <div className='nftRightContainerStatsItem'>

@@ -49,7 +49,7 @@ const TopCollectionsContainer = () => {
         getDataAsync(
             topCollections1DayFetching,
             topCollections1DayFetched,
-            `${API_MAINNET_V2}/v2/marketplace/popular_collections?timeRange=1d`,
+            `${API_MAINNET_V2}/marketplace/popular_collections?timeRange=1d`,
             '',
             normalizeData
         )
@@ -59,7 +59,7 @@ const TopCollectionsContainer = () => {
         getDataAsync(
             topCollections7DayFetching,
             topCollections7DayFetched,
-            `${API_MAINNET_V2}/v2/marketplace/popular_collections?timeRange=7d`,
+            `${API_MAINNET_V2}/marketplace/popular_collections?timeRange=7d`,
             '',
             normalizeData
         )
@@ -69,7 +69,7 @@ const TopCollectionsContainer = () => {
         getDataAsync(
             topCollections30DayFetching,
             topCollections30DayFetched,
-            `${API_MAINNET_V2}/v2/marketplace/popular_collections?timeRange=30d`,
+            `${API_MAINNET_V2}/marketplace/popular_collections?timeRange=30d`,
             '',
             normalizeData
         )

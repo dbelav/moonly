@@ -11,19 +11,18 @@ const NftRightContainer = ({nftStats}) =>{
     const normalizeData = (data, time) =>{
 
         const smt = {
-            volume: data.results['volume' + time],
-            txns: data.results['txns' + time],
-            avgPrice: data.results['avgPrice' + time],
+            volume: checkData(data.results['volume' + time]),
+            txns: checkData(data.results['txns' + time]),
+            avgPrice: checkData(data.results['avgPrice' + time]),
             deltaFloor: checkData(data.results['deltaFloor' + time])
         }
-
         return {
             volume: smt.volume === 'N/A' ? 'N/A' : (smt.volume / 1e12).toFixed(2) + 'K',
-            txns: smt.txns,
+            txns: smt.txns === 'N/A' ? 'N/A' : smt.txns,
             avgPrice: smt.avgPrice === 'N/A' ? 'N/A' : (smt.avgPrice / 1e9).toFixed(2),
-            deltaFloor: smt.deltaFloor === 'N/A' ? 'N/A' : (smt.deltaFloor / 1e7).toFixed(2)
+            deltaFloor: smt.deltaFloor === 'N/A' ? 'N/A' : smt.deltaFloor.toFixed(2)
         }     
-    };
+    }
 
     const data24H = normalizeData(nftStats, '24hr')
 
@@ -38,11 +37,11 @@ const NftRightContainer = ({nftStats}) =>{
             <div className='nftRightContainerStats'>
                 <div className='nftRightContainerStatsItem'>
                     <h3>Highest Offer</h3>
-                    <span>{(nftStats.results.highestGlobalOffer / 1e9).toFixed(2)}</span>
+                    <span>{checkData(nftStats.results.highestGlobalOffer / 1e9).toFixed(2)}</span>
                 </div>
                 <div className='nftRightContainerStatsItem'>
                     <h3>Total Listed Value</h3>
-                    <span>{(nftStats.results.listedTotalValue/ 1e9).toFixed(2)}</span>
+                    <span>{checkData((nftStats.results.listedTotalValue/ 1e9).toFixed(2))}</span>
                 </div>
             </div>
 

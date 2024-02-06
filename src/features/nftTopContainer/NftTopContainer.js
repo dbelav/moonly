@@ -67,7 +67,7 @@ const NftTopContainer = ({
                         </div>
                     </div>
                 </div>
-
+                            {console.log(nftStats)}
                 <div className="nftTopContainerSecond">
                     <div className="nftTopContainerSecondInfo">
                         <div className="nftTopContainerSecondInfoPrice nftTopContainerItem">

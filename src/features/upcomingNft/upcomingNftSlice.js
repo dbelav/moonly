@@ -1,33 +1,43 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit'
+
 
 const initialState = {
     upcomingNft: [],
+    upcomingNftLoading: false,
     upcomingNftOffset: 10,
-    upcomingNftButton: false
+    upcomingNftButton: false,
 }
 
 const upcomingNft = createSlice({
     name: 'upcomingNftt',
     initialState,
     reducers: {
-        upcomingNftFetched: (state, action) =>{
-            action.payload.map(item => state.upcomingNft.push(item))
+        upcomingNftFetched: (state, action) => {
+            action.payload.map((item) => state.upcomingNft.push(item))
             state.upcomingNftOffset += 10
             state.upcomingNftButton = false
+            state.upcomingNftLoading = false
         },
-        newOffsetUpcomingNftPage: (state) =>{
+        upcomingNftFetching: (state) => {
+            state.upcomingNftLoading = true
+            
+        },
+        newOffsetUpcomingNftPage: (state) => {
             state.upcomingNftOffset = 0
         },
-        upcomingNftButtonClick: (state) =>{
+        upcomingNftButtonClick: (state) => {
             state.upcomingNftButton = true
         },
-    }
-
+    },
 })
 
-const {actions, reducer} = upcomingNft
-
+const { actions, reducer } = upcomingNft
 
 export default reducer
 
-export const { upcomingNftFetched, upcomingNftButtonClick } = actions
+export const {
+    upcomingNftFetched,
+    upcomingNftButtonClick,
+    newOffsetUpcomingNftPage,
+    upcomingNftFetching,
+} = actions

@@ -1,6 +1,6 @@
-import { useEffect, memo } from 'react'
+import { useEffect, memo, useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { upcomingNftFetched } from './upcomingNftSlice'
+import { upcomingNftFetched, upcomingNftFetching } from './upcomingNftSlice'
 import { useHttp } from '../../hooks/http.hook'
 import UpcomingNftItem from './upcomingNftItem/UpcomingNftItem'
 import { useLocation } from 'react-router-dom'
@@ -27,25 +27,32 @@ const UpcomingNft = () => {
     )
 
     const upcomingNft = useSelector(upcomingNftPageSelector)
+    const { upcomingNftLoading } = useSelector((state) => state.upcomingNft)
     const { upcomingNftOffset } = useSelector((state) => state.upcomingNft)
     const { upcomingNftButton } = useSelector((state) => state.upcomingNft)
 
     const dispatch = useDispatch()
 
     const { request } = useHttp()
-
+    
     async function getData() {
+        dispatch(upcomingNftFetching())
         const dataUpcomingNft = await request(
             `${API_MAINNET_V2}/launchpad/collections?limit=10&offset=${upcomingNftOffset}`
         )
         dispatch(upcomingNftFetched(dataUpcomingNft))
     }
-
     useEffect(() => {
-        if (upcomingNftButton === true || upcomingNft.length === 0) {
+        if (upcomingNftButton === true) {
             getData()
         }
     }, [upcomingNftButton])
+
+    useEffect(() => {
+        if (upcomingNftLoading === false) {
+            getData()
+        }
+    }, [])
 
     const renderUpcomingNft = (upcomingNft) => {
         return upcomingNft.map((item) => {
